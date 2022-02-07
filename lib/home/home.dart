@@ -125,7 +125,7 @@ class _HomePageState extends State<HomePage> {
                       //height: 100,
                       child: Column(
                         children: <Widget> [
-                          const Text("What you'd like to delivered?"),
+                          const Text("What you'd like to delivered?", style: TextStyle(fontSize: 17),),
                           FittedBox(
                             child: Row(
                               children: <Widget>[
@@ -247,7 +247,7 @@ class _HomePageState extends State<HomePage> {
                   flex: 5,
                   child: Container(
                     padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                    child: Text("Pro Drivers in Your Area"),
+                    child: Text("Pro Drivers in Your Area", style: TextStyle(fontSize: 18),),
                   ),
                 ),
                 Expanded(
@@ -705,7 +705,7 @@ class _HomePageState extends State<HomePage> {
                           flex: 5,
                           child: Container(
                             padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
-                            child: const Text("How it Works"),
+                            child: const Text("How it Works", style: TextStyle(fontSize: 20)),
                           ),
                         ),
                         Expanded(
