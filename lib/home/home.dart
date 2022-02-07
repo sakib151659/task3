@@ -14,670 +14,786 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: <Widget>[
-          Stack(
-            children: <Widget>[
-              Stack(
-                children: <Widget>[
-                  Stack(
-                    children: <Widget>[
-                      Container(
-                        height: 121,
-                        decoration: BoxDecoration(
-                          borderRadius: const BorderRadius.only(
-                              topRight: Radius.circular(0),
-                              bottomRight: Radius.circular(20.0),
-                              topLeft: Radius.circular(.0),
-                              bottomLeft: Radius.circular(20.0)),
-                          color: HexColor("#60E99C"),
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Stack(
+              children: <Widget>[
+                Stack(
+                  children: <Widget>[
+                    Stack(
+                      children: <Widget>[
+                        Container(
+                          height: 121,
+                          decoration: BoxDecoration(
+                            borderRadius: const BorderRadius.only(
+                                topRight: Radius.circular(0),
+                                bottomRight: Radius.circular(20.0),
+                                topLeft: Radius.circular(.0),
+                                bottomLeft: Radius.circular(20.0)),
+                            color: HexColor("#60E99C"),
+                          ),
+
                         ),
-
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: const BorderRadius.only(
-                              topRight: Radius.circular(0),
-                              bottomRight: Radius.circular(20.0),
-                              topLeft: Radius.circular(.0),
-                              bottomLeft: Radius.circular(20.0)),
-                          color: HexColor("#1B3149"),
-                        ),
-                        height: 115,
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: const BorderRadius.only(
+                                topRight: Radius.circular(0),
+                                bottomRight: Radius.circular(20.0),
+                                topLeft: Radius.circular(.0),
+                                bottomLeft: Radius.circular(20.0)),
+                            color: HexColor("#1B3149"),
+                          ),
+                          height: 115,
 
 
-                        child: Row(
-                          children: <Widget>[
-                            Expanded(
-                              flex: 3,
-                              child: Container(
-                                padding: EdgeInsets.zero,
-                                child: IconButton(
-                                  onPressed: (){
-                                  },
-                                  icon: Image.asset("assets/images/appLogo.png", height: 100, width: 127,),
-
-                                ),
-                              ),
-                            ),
-
-                            Expanded(
-                                flex: 4,
-                                child: Container()
-                            ),
-
-                            Expanded(
-                              flex: 3,
-                              child: Row(
-                                //mainAxisAlignment: MainAxisAlignment.end,
-
-                                children: <Widget>[
-                                  IconButton(
-                                    onPressed: (){
-                                    },
-                                    icon: Image.asset("assets/imageIcon/notification.png", height: 30, width: 30, color: Colors.greenAccent),
-
-                                  ),
-
-                                  IconButton(
-                                    onPressed: (){
-                                    },
-                                    icon: Image.asset("assets/imageIcon/person.png", height: 30, width: 30, color: Colors.greenAccent),
-
-                                  ),
-
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-
-
-                      ),
-                      ////////////////// apbar container ended///////////////
-
-                    ],
-                  ),
-
-                  Container(
-                    padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
-                    margin: const EdgeInsets.fromLTRB(10, 100, 10, 10),
-
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                          topRight: Radius.circular(10),
-                          bottomRight: Radius.circular(20.0),
-                          topLeft: Radius.circular(10),
-                          bottomLeft: Radius.circular(20.0)),
-                      color: Colors.white,
-
-                    ),
-                    //height: 100,
-                    child: Column(
-                      children: <Widget> [
-                        const Text("What you'd like to delivered?"),
-                        FittedBox(
                           child: Row(
                             children: <Widget>[
-                              InkWell(
-                                child: Column(
-                                  children: [
-                                    Card(
-                                      color: HexColor("#60E99C"),
-                                      elevation: 5,
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(8)
-                                      ),
-                                      child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: <Widget>[
-                                          Image.asset('assets/imageIcon/bag.png',height: 128, width: 120,),
+                              Expanded(
+                                flex: 3,
+                                child: Container(
+                                  padding: EdgeInsets.zero,
+                                  child: IconButton(
+                                    onPressed: (){
+                                    },
+                                    icon: Image.asset("assets/images/appLogo.png", height: 100, width: 127,),
 
-                                        ],
-                                      ),
-                                    ),
-                                    Text('Shop & Drop',style: TextStyle( fontSize: 16),),
-                                  ],
+                                  ),
                                 ),
-                                onTap: () async{
-                                  //cttcUrl();
-                                  //Navigator.push(context, new MaterialPageRoute(builder: (context) => cttcDmp() ));
-                                },
                               ),
 
-                              InkWell(
-                                child: Column(
-                                  children: [
-                                    Card(
-                                      color: HexColor("#60E99C"),
-                                      elevation: 5,
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(8)
-                                      ),
-                                      child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: <Widget>[
-                                          Image.asset('assets/imageIcon/hand.png',height: 128, width: 120,),
-
-                                        ],
-                                      ),
-                                    ),
-                                    Text('Collect & Delivers',style: TextStyle( fontSize: 16),),
-                                  ],
-                                ),
-                                onTap: () async{
-                                  //cttcUrl();
-                                  //Navigator.push(context, new MaterialPageRoute(builder: (context) => cttcDmp() ));
-                                },
+                              Expanded(
+                                  flex: 4,
+                                  child: Container()
                               ),
 
-                              InkWell(
-                                child: Column(
-                                  children: [
-                                    Card(
-                                      color: HexColor("#60E99C"),
-                                      elevation: 5,
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(8)
-                                      ),
-                                      child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: <Widget>[
-                                          Image.asset('assets/imageIcon/car.png',height: 128, width: 120,),
+                              Expanded(
+                                flex: 3,
+                                child: Row(
+                                  //mainAxisAlignment: MainAxisAlignment.end,
 
-                                        ],
-                                      ),
+                                  children: <Widget>[
+                                    IconButton(
+                                      onPressed: (){
+                                      },
+                                      icon: Image.asset("assets/imageIcon/notification.png", height: 30, width: 30, color: Colors.greenAccent),
+
                                     ),
-                                    Text('Movers',style: TextStyle( fontSize: 16),),
+
+                                    IconButton(
+                                      onPressed: (){
+                                      },
+                                      icon: Image.asset("assets/imageIcon/person.png", height: 30, width: 30, color: Colors.greenAccent),
+
+                                    ),
+
                                   ],
                                 ),
-                                onTap: () async{
-                                  //cttcUrl();
-                                  //Navigator.push(context, new MaterialPageRoute(builder: (context) => cttcDmp() ));
-                                },
                               ),
-
                             ],
                           ),
-                        )
+
+
+                        ),
+                        ////////////////// apbar container ended///////////////
 
                       ],
                     ),
 
+                    Container(
+                      padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+                      margin: const EdgeInsets.fromLTRB(10, 100, 10, 10),
+
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(10),
+                            bottomRight: Radius.circular(20.0),
+                            topLeft: Radius.circular(10),
+                            bottomLeft: Radius.circular(20.0)),
+                        color: Colors.white,
+
+                      ),
+                      //height: 100,
+                      child: Column(
+                        children: <Widget> [
+                          const Text("What you'd like to delivered?"),
+                          FittedBox(
+                            child: Row(
+                              children: <Widget>[
+                                InkWell(
+                                  child: Column(
+                                    children: [
+                                      Card(
+                                        color: HexColor("#60E99C"),
+                                        elevation: 5,
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(8)
+                                        ),
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          children: <Widget>[
+                                            Image.asset('assets/imageIcon/bag.png',height: 128, width: 120,),
+
+                                          ],
+                                        ),
+                                      ),
+                                      Text('Shop & Drop',style: TextStyle( fontSize: 16),),
+                                    ],
+                                  ),
+                                  onTap: () async{
+                                    //cttcUrl();
+                                    //Navigator.push(context, new MaterialPageRoute(builder: (context) => cttcDmp() ));
+                                  },
+                                ),
+
+                                InkWell(
+                                  child: Column(
+                                    children: [
+                                      Card(
+                                        color: HexColor("#60E99C"),
+                                        elevation: 5,
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(8)
+                                        ),
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          children: <Widget>[
+                                            Image.asset('assets/imageIcon/hand.png',height: 128, width: 120,),
+
+                                          ],
+                                        ),
+                                      ),
+                                      Text('Collect & Delivers',style: TextStyle( fontSize: 16),),
+                                    ],
+                                  ),
+                                  onTap: () async{
+                                    //cttcUrl();
+                                    //Navigator.push(context, new MaterialPageRoute(builder: (context) => cttcDmp() ));
+                                  },
+                                ),
+
+                                InkWell(
+                                  child: Column(
+                                    children: [
+                                      Card(
+                                        color: HexColor("#60E99C"),
+                                        elevation: 5,
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius: BorderRadius.circular(8)
+                                        ),
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          children: <Widget>[
+                                            Image.asset('assets/imageIcon/car.png',height: 128, width: 120,),
+
+                                          ],
+                                        ),
+                                      ),
+                                      Text('Movers',style: TextStyle( fontSize: 16),),
+                                    ],
+                                  ),
+                                  onTap: () async{
+                                    //cttcUrl();
+                                    //Navigator.push(context, new MaterialPageRoute(builder: (context) => cttcDmp() ));
+                                  },
+                                ),
+
+                              ],
+                            ),
+                          )
+
+                        ],
+                      ),
+
+                    ),
+                  ],
+                )
+              ],
+            ),
+
+            /////////////////////////////////////////////////// appbar done
+            Container(
+              height: 100,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  Container(
+                    child: Image.asset('assets/imageIcon/card1.png',),
+                  ),
+                  SizedBox(width: 20,),
+                  Container(
+                    child: Image.asset('assets/imageIcon/card2.png',),
                   ),
                 ],
-              )
-            ],
-          ),
+              ),
+            ),
 
-          /////////////////////////////////////////////////// appbar done
-          Container(
-            height: 100,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
+            ////////////////////////////////// 2 hours delivery
+
+            SizedBox(height: 10,),
+
+            Row(
               children: <Widget>[
-                Container(
-                  child: Image.asset('assets/imageIcon/card1.png',),
+                Expanded(
+                  flex: 5,
+                  child: Container(
+                    padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                    child: Text("Pro Drivers in Your Area"),
+                  ),
                 ),
-                SizedBox(width: 20,),
-                Container(
-                  child: Image.asset('assets/imageIcon/card2.png',),
+                Expanded(
+                  flex: 3,
+                    child: Container()
                 ),
+                Expanded(
+                  flex: 2,
+                  child: Container(
+                    child: InkWell(
+                        child: Text("View more", style: TextStyle(color: HexColor("#5BDB98")),
+                        ),
+                         onTap: (){
+
+                         },
+                    ) ,
+                  ),
+                ),
+
               ],
             ),
-          ),
 
-          ////////////////////////////////// 2 hours delivery
+            SizedBox(height: 10,),
 
-          SizedBox(height: 10,),
+            Container(
+              height: 200,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  Material(
+                    elevation: 5,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(2)
 
-          Row(
-            children: <Widget>[
-              Expanded(
-                flex: 5,
-                child: Container(
-                  padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                  child: Text("Pro Drivers in Your Area"),
-                ),
-              ),
-              Expanded(
-                flex: 3,
-                  child: Container()
-              ),
-              Expanded(
-                flex: 2,
-                child: Container(
-                  child: InkWell(
-                      child: Text("View more", style: TextStyle(color: HexColor("#5BDB98")),
                       ),
-                       onTap: (){
+                      child: FittedBox(
+                        child: Container(
+                         // height: 100,
+                          child: Stack(
+                            children: <Widget>[
+                              Column(
+                                children: <Widget>[
+                                  FittedBox(
+                                    child: Container(
+                                      child: Image.asset('assets/imageIcon/card3.png',height: 80, ),
+                                    ),
+                                  ),
+                                  Container(
+                                    color: Colors.white,
+                                    //height: 80,
+                                    width: 180,
+                                    child: Column(
+                                      children: <Widget>[
+                                        SizedBox(height: 10,),
+                                        Row(
+                                          children: <Widget>[
+                                            Expanded(
+                                              flex: 7,
+                                              child: Container(
+                                                padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                                child: Text("Succes rate"),
+                                              ),
+                                            ),
+                                            Expanded(
+                                                flex: 1,
+                                                child: Container()
+                                            ),
+                                            Expanded(
+                                              flex: 2,
+                                              child: Container(
+                                                  child: Text("5.0", style: TextStyle(color: HexColor("#5BDB98")),
+                                                  ),
+                                              ),
+                                            ),
 
-                       },
-                  ) ,
-                ),
-              ),
+                                          ],
+                                        ),
 
-            ],
-          ),
+                                        SizedBox(height: 10,),
 
-          SizedBox(height: 10,),
+                                        Row(
+                                          children: <Widget>[
+                                            Expanded(
+                                              flex: 7,
+                                              child: Container(
+                                                padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                                child: Text("Accuracy score"),
+                                              ),
+                                            ),
+                                            Expanded(
+                                                flex: 1,
+                                                child: Container()
+                                            ),
+                                            Expanded(
+                                              flex: 2,
+                                              child: Container(
+                                                child: Text("100", style: TextStyle(color: HexColor("#5BDB98")),
+                                                ),
+                                              ),
+                                            ),
 
-          Container(
-            height: 200,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                Material(
-                  elevation: 5,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(2)
+                                          ],
+                                        ),
+                                        SizedBox(height: 10,),
 
-                    ),
-                    child: FittedBox(
-                      child: Container(
-                       // height: 100,
-                        child: Stack(
-                          children: <Widget>[
-                            Column(
-                              children: <Widget>[
-                                FittedBox(
+                                        RaisedButton(
+                                          color: HexColor("#5BDB98"),
+                                          onPressed: (){
+
+                                        },
+                                          child: Text("Request a quote", style: TextStyle(color: Colors.white,)),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+
+                              Container(
+                                margin: EdgeInsets.fromLTRB(26, 70, 10, 10),
+                                height: 20,
+                                decoration: BoxDecoration(
+                                  color: Colors.transparent,
+                                  borderRadius: BorderRadius.circular(5),
+
+                                ),
+                                child: Material(
+                                  elevation: 5,
                                   child: Container(
-                                    child: Image.asset('assets/imageIcon/card3.png',height: 80, ),
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(5),
+
+                                    ),
+                                    child: Row(
+                                      children: <Widget>[
+                                        Image.asset("assets/imageIcon/star.png", height: 30, width: 30,),
+                                        Text("4.80 "),
+                                        Container(
+                                          padding: EdgeInsets.all(3.0),
+                                          child: Row(
+                                            children: <Widget>[
+                                              Image.asset("assets/imageIcon/car.png", height: 30, width: 30, color: Colors.black,),
+                                              Image.asset("assets/imageIcon/hand.png", height: 30, width: 30, color: Colors.black),
+                                            ],
+                                          ),
+                                        ),
+
+                                      ],
+                                    ),
                                   ),
                                 ),
-                                Container(
-                                  color: Colors.white,
-                                  //height: 80,
-                                  width: 180,
-                                  child: Column(
-                                    children: <Widget>[
-                                      SizedBox(height: 10,),
-                                      Row(
-                                        children: <Widget>[
-                                          Expanded(
-                                            flex: 7,
-                                            child: Container(
-                                              padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                              child: Text("Succes rate"),
+                              ),
+
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 10,),
+
+                  Material(
+                    elevation: 5,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(2)
+
+                      ),
+                      child: FittedBox(
+                        child: Container(
+                          // height: 100,
+                          child: Stack(
+                            children: <Widget>[
+                              Column(
+                                children: <Widget>[
+                                  FittedBox(
+                                    child: Container(
+                                      child: Image.asset('assets/imageIcon/card3.png',height: 80, ),
+                                    ),
+                                  ),
+                                  Container(
+                                    color: Colors.white,
+                                    //height: 80,
+                                    width: 180,
+                                    child: Column(
+                                      children: <Widget>[
+                                        SizedBox(height: 10,),
+                                        Row(
+                                          children: <Widget>[
+                                            Expanded(
+                                              flex: 7,
+                                              child: Container(
+                                                padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                                child: Text("Succes rate"),
+                                              ),
                                             ),
-                                          ),
-                                          Expanded(
-                                              flex: 1,
-                                              child: Container()
-                                          ),
-                                          Expanded(
-                                            flex: 2,
-                                            child: Container(
+                                            Expanded(
+                                                flex: 1,
+                                                child: Container()
+                                            ),
+                                            Expanded(
+                                              flex: 2,
+                                              child: Container(
                                                 child: Text("5.0", style: TextStyle(color: HexColor("#5BDB98")),
                                                 ),
-                                            ),
-                                          ),
-
-                                        ],
-                                      ),
-
-                                      SizedBox(height: 10,),
-
-                                      Row(
-                                        children: <Widget>[
-                                          Expanded(
-                                            flex: 7,
-                                            child: Container(
-                                              padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                              child: Text("Accuracy score"),
-                                            ),
-                                          ),
-                                          Expanded(
-                                              flex: 1,
-                                              child: Container()
-                                          ),
-                                          Expanded(
-                                            flex: 2,
-                                            child: Container(
-                                              child: Text("100", style: TextStyle(color: HexColor("#5BDB98")),
                                               ),
                                             ),
-                                          ),
 
-                                        ],
-                                      ),
-                                      SizedBox(height: 10,),
-
-                                      RaisedButton(
-                                        color: HexColor("#5BDB98"),
-                                        onPressed: (){
-
-                                      },
-                                        child: Text("Request a quote", style: TextStyle(color: Colors.white,)),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-
-                            Container(
-                              margin: EdgeInsets.fromLTRB(26, 70, 10, 10),
-                              height: 20,
-                              decoration: BoxDecoration(
-                                color: Colors.transparent,
-                                borderRadius: BorderRadius.circular(5),
-
-                              ),
-                              child: Material(
-                                elevation: 5,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(5),
-
-                                  ),
-                                  child: Row(
-                                    children: <Widget>[
-                                      Image.asset("assets/imageIcon/star.png", height: 30, width: 30,),
-                                      Text("4.80 "),
-                                      Container(
-                                        padding: EdgeInsets.all(3.0),
-                                        child: Row(
-                                          children: <Widget>[
-                                            Image.asset("assets/imageIcon/car.png", height: 30, width: 30, color: Colors.black,),
-                                            Image.asset("assets/imageIcon/hand.png", height: 30, width: 30, color: Colors.black),
                                           ],
                                         ),
-                                      ),
 
-                                    ],
+                                        SizedBox(height: 10,),
+
+                                        Row(
+                                          children: <Widget>[
+                                            Expanded(
+                                              flex: 7,
+                                              child: Container(
+                                                padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                                child: Text("Accuracy score"),
+                                              ),
+                                            ),
+                                            Expanded(
+                                                flex: 1,
+                                                child: Container()
+                                            ),
+                                            Expanded(
+                                              flex: 2,
+                                              child: Container(
+                                                child: Text("100", style: TextStyle(color: HexColor("#5BDB98")),
+                                                ),
+                                              ),
+                                            ),
+
+                                          ],
+                                        ),
+                                        SizedBox(height: 10,),
+
+                                        RaisedButton(
+                                          color: HexColor("#5BDB98"),
+                                          onPressed: (){
+
+                                          },
+                                          child: Text("Request a quote", style: TextStyle(color: Colors.white,)),
+                                        )
+                                      ],
+                                    ),
                                   ),
-                                ),
+                                ],
                               ),
-                            ),
 
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(width: 10,),
+                              Container(
+                                margin: EdgeInsets.fromLTRB(26, 70, 10, 10),
+                                height: 20,
+                                decoration: BoxDecoration(
+                                  color: Colors.transparent,
+                                  borderRadius: BorderRadius.circular(5),
 
-                Material(
-                  elevation: 5,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(2)
-
-                    ),
-                    child: FittedBox(
-                      child: Container(
-                        // height: 100,
-                        child: Stack(
-                          children: <Widget>[
-                            Column(
-                              children: <Widget>[
-                                FittedBox(
+                                ),
+                                child: Material(
+                                  elevation: 5,
                                   child: Container(
-                                    child: Image.asset('assets/imageIcon/card3.png',height: 80, ),
-                                  ),
-                                ),
-                                Container(
-                                  color: Colors.white,
-                                  //height: 80,
-                                  width: 180,
-                                  child: Column(
-                                    children: <Widget>[
-                                      SizedBox(height: 10,),
-                                      Row(
-                                        children: <Widget>[
-                                          Expanded(
-                                            flex: 7,
-                                            child: Container(
-                                              padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                              child: Text("Succes rate"),
-                                            ),
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(5),
+
+                                    ),
+                                    child: Row(
+                                      children: <Widget>[
+                                        Image.asset("assets/imageIcon/star.png", height: 30, width: 30,),
+                                        Text("4.80 "),
+                                        Container(
+                                          padding: EdgeInsets.all(3.0),
+                                          child: Row(
+                                            children: <Widget>[
+                                              Image.asset("assets/imageIcon/car.png", height: 30, width: 30, color: Colors.black,),
+                                              Image.asset("assets/imageIcon/hand.png", height: 30, width: 30, color: Colors.black),
+                                            ],
                                           ),
-                                          Expanded(
-                                              flex: 1,
-                                              child: Container()
-                                          ),
-                                          Expanded(
-                                            flex: 2,
-                                            child: Container(
-                                              child: Text("5.0", style: TextStyle(color: HexColor("#5BDB98")),
-                                              ),
-                                            ),
-                                          ),
-
-                                        ],
-                                      ),
-
-                                      SizedBox(height: 10,),
-
-                                      Row(
-                                        children: <Widget>[
-                                          Expanded(
-                                            flex: 7,
-                                            child: Container(
-                                              padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                              child: Text("Accuracy score"),
-                                            ),
-                                          ),
-                                          Expanded(
-                                              flex: 1,
-                                              child: Container()
-                                          ),
-                                          Expanded(
-                                            flex: 2,
-                                            child: Container(
-                                              child: Text("100", style: TextStyle(color: HexColor("#5BDB98")),
-                                              ),
-                                            ),
-                                          ),
-
-                                        ],
-                                      ),
-                                      SizedBox(height: 10,),
-
-                                      RaisedButton(
-                                        color: HexColor("#5BDB98"),
-                                        onPressed: (){
-
-                                        },
-                                        child: Text("Request a quote", style: TextStyle(color: Colors.white,)),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-
-                            Container(
-                              margin: EdgeInsets.fromLTRB(26, 70, 10, 10),
-                              height: 20,
-                              decoration: BoxDecoration(
-                                color: Colors.transparent,
-                                borderRadius: BorderRadius.circular(5),
-
-                              ),
-                              child: Material(
-                                elevation: 5,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(5),
-
-                                  ),
-                                  child: Row(
-                                    children: <Widget>[
-                                      Image.asset("assets/imageIcon/star.png", height: 30, width: 30,),
-                                      Text("4.80 "),
-                                      Container(
-                                        padding: EdgeInsets.all(3.0),
-                                        child: Row(
-                                          children: <Widget>[
-                                            Image.asset("assets/imageIcon/car.png", height: 30, width: 30, color: Colors.black,),
-                                            Image.asset("assets/imageIcon/hand.png", height: 30, width: 30, color: Colors.black),
-                                          ],
                                         ),
-                                      ),
 
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
 
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-                SizedBox(width: 10,),
+                  SizedBox(width: 10,),
 
-                Material(
-                  elevation: 5,
-                  child: Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(2)
+                  Material(
+                    elevation: 5,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(2)
 
-                    ),
-                    child: FittedBox(
-                      child: Container(
-                        // height: 100,
-                        child: Stack(
-                          children: <Widget>[
-                            Column(
-                              children: <Widget>[
-                                FittedBox(
+                      ),
+                      child: FittedBox(
+                        child: Container(
+                          // height: 100,
+                          child: Stack(
+                            children: <Widget>[
+                              Column(
+                                children: <Widget>[
+                                  FittedBox(
+                                    child: Container(
+                                      child: Image.asset('assets/imageIcon/card3.png',height: 80, ),
+                                    ),
+                                  ),
+                                  Container(
+                                    color: Colors.white,
+                                    //height: 80,
+                                    width: 180,
+                                    child: Column(
+                                      children: <Widget>[
+                                        SizedBox(height: 10,),
+                                        Row(
+                                          children: <Widget>[
+                                            Expanded(
+                                              flex: 7,
+                                              child: Container(
+                                                padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                                child: Text("Succes rate"),
+                                              ),
+                                            ),
+                                            Expanded(
+                                                flex: 1,
+                                                child: Container()
+                                            ),
+                                            Expanded(
+                                              flex: 2,
+                                              child: Container(
+                                                child: Text("5.0", style: TextStyle(color: HexColor("#5BDB98")),
+                                                ),
+                                              ),
+                                            ),
+
+                                          ],
+                                        ),
+
+                                        SizedBox(height: 10,),
+
+                                        Row(
+                                          children: <Widget>[
+                                            Expanded(
+                                              flex: 7,
+                                              child: Container(
+                                                padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                                child: Text("Accuracy score"),
+                                              ),
+                                            ),
+                                            Expanded(
+                                                flex: 1,
+                                                child: Container()
+                                            ),
+                                            Expanded(
+                                              flex: 2,
+                                              child: Container(
+                                                child: Text("100", style: TextStyle(color: HexColor("#5BDB98")),
+                                                ),
+                                              ),
+                                            ),
+
+                                          ],
+                                        ),
+                                        SizedBox(height: 10,),
+
+                                        RaisedButton(
+                                          color: HexColor("#5BDB98"),
+                                          onPressed: (){
+
+                                          },
+                                          child: Text("Request a quote", style: TextStyle(color: Colors.white,)),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+
+                              Container(
+                                margin: EdgeInsets.fromLTRB(26, 70, 10, 10),
+                                height: 20,
+                                decoration: BoxDecoration(
+                                  color: Colors.transparent,
+                                  borderRadius: BorderRadius.circular(5),
+
+                                ),
+                                child: Material(
+                                  elevation: 5,
                                   child: Container(
-                                    child: Image.asset('assets/imageIcon/card3.png',height: 80, ),
-                                  ),
-                                ),
-                                Container(
-                                  color: Colors.white,
-                                  //height: 80,
-                                  width: 180,
-                                  child: Column(
-                                    children: <Widget>[
-                                      SizedBox(height: 10,),
-                                      Row(
-                                        children: <Widget>[
-                                          Expanded(
-                                            flex: 7,
-                                            child: Container(
-                                              padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                              child: Text("Succes rate"),
-                                            ),
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(5),
+
+                                    ),
+                                    child: Row(
+                                      children: <Widget>[
+                                        Image.asset("assets/imageIcon/star.png", height: 30, width: 30,),
+                                        Text("4.80 "),
+                                        Container(
+                                          padding: EdgeInsets.all(3.0),
+                                          child: Row(
+                                            children: <Widget>[
+                                              Image.asset("assets/imageIcon/car.png", height: 30, width: 30, color: Colors.black,),
+                                              Image.asset("assets/imageIcon/hand.png", height: 30, width: 30, color: Colors.black),
+                                            ],
                                           ),
-                                          Expanded(
-                                              flex: 1,
-                                              child: Container()
-                                          ),
-                                          Expanded(
-                                            flex: 2,
-                                            child: Container(
-                                              child: Text("5.0", style: TextStyle(color: HexColor("#5BDB98")),
-                                              ),
-                                            ),
-                                          ),
-
-                                        ],
-                                      ),
-
-                                      SizedBox(height: 10,),
-
-                                      Row(
-                                        children: <Widget>[
-                                          Expanded(
-                                            flex: 7,
-                                            child: Container(
-                                              padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                              child: Text("Accuracy score"),
-                                            ),
-                                          ),
-                                          Expanded(
-                                              flex: 1,
-                                              child: Container()
-                                          ),
-                                          Expanded(
-                                            flex: 2,
-                                            child: Container(
-                                              child: Text("100", style: TextStyle(color: HexColor("#5BDB98")),
-                                              ),
-                                            ),
-                                          ),
-
-                                        ],
-                                      ),
-                                      SizedBox(height: 10,),
-
-                                      RaisedButton(
-                                        color: HexColor("#5BDB98"),
-                                        onPressed: (){
-
-                                        },
-                                        child: Text("Request a quote", style: TextStyle(color: Colors.white,)),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-
-                            Container(
-                              margin: EdgeInsets.fromLTRB(26, 70, 10, 10),
-                              height: 20,
-                              decoration: BoxDecoration(
-                                color: Colors.transparent,
-                                borderRadius: BorderRadius.circular(5),
-
-                              ),
-                              child: Material(
-                                elevation: 5,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(5),
-
-                                  ),
-                                  child: Row(
-                                    children: <Widget>[
-                                      Image.asset("assets/imageIcon/star.png", height: 30, width: 30,),
-                                      Text("4.80 "),
-                                      Container(
-                                        padding: EdgeInsets.all(3.0),
-                                        child: Row(
-                                          children: <Widget>[
-                                            Image.asset("assets/imageIcon/car.png", height: 30, width: 30, color: Colors.black,),
-                                            Image.asset("assets/imageIcon/hand.png", height: 30, width: 30, color: Colors.black),
-                                          ],
                                         ),
-                                      ),
 
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
 
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-                SizedBox(width: 10,),
+                  SizedBox(width: 10,),
 
-              ],
+                ],
 
+              ),
             ),
-          ),
 
-          ///////////////////////// pro drivers area ended ///////////////////////////////////
+            ///////////////////////// pro drivers area ended ///////////////////////////////////
+
+            SizedBox(height: 10,),
+
+            Material(
+              elevation: 5,
+              child: Container(
+                height: 200,
+                margin: EdgeInsets.zero,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                ),
+
+                child: Column(
+                  children: <Widget>[
+                    Row(
+                      children: <Widget>[
+                        Expanded(
+                          flex: 5,
+                          child: Container(
+                            padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
+                            child: const Text("How it Works"),
+                          ),
+                        ),
+                        Expanded(
+                            flex: 3,
+                            child: Container()
+                        ),
+                        Expanded(
+                          flex: 2,
+                          child: Container(
+                            child: InkWell(
+                              child: Text("Read more", style: TextStyle(color: HexColor("#5BDB98")),
+                              ),
+                              onTap: (){
+
+                              },
+                            ) ,
+                          ),
+                        ),
+
+                      ],
+                    ),
 
 
-        ],
+
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          // choose category
+                          Expanded(
+                            flex: 2,
+                            child: Container(
+                              padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
+                              child: Column(
+                                children: <Widget>[
+                                  Image.asset('assets/imageIcon/chooseCategory.png'),
+                                  const Text("Choose a Category"),
+                                ],
+                              ),
+                            ),
+                          ),
+                          // arrow
+                          Expanded(
+                              flex: 2,
+                              child: Image.asset('assets/imageIcon/arrow.png'),
+                          ),
+
+                          // provide details
+                          Expanded(
+                            flex: 2,
+                            child: Column(
+                              children: <Widget>[
+                                Image.asset('assets/imageIcon/provideDetails.png'),
+                                const Text("Provide Details"),
+                              ],
+                            ),
+                          ),
+
+                          // arrow
+                          Expanded(
+                            flex: 2,
+                            child: Image.asset('assets/imageIcon/arrow.png'),
+                          ),
+                          // get delivered
+                          Expanded(
+                            flex: 2,
+                            child: Column(
+                              children: <Widget>[
+                                Image.asset('assets/imageIcon/getDelivered.png'),
+                                const Text("Get Delivered"),
+                              ],
+                            )
+                          ),
+
+                        ],
+                      ),
+                    ),
+
+                    //////////////////// How it works read more ended ///
+
+                    SizedBox(height: 10,),
+
+
+
+
+
+                  ],
+                ),
+
+              ),
+            ),
+
+
+          ],
+        ),
       ),
 
     );
