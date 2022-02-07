@@ -37,6 +37,7 @@ dependencies:
   hexcolor: ^2.0.6
   animated_splash_screen: ^1.1.0
   carousel_slider: ^4.0.0
+  bulleted_list: ^0.0.1+0.1a
 
 
 dev_dependencies:

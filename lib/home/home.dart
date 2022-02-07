@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:bulleted_list/bulleted_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -18,6 +19,14 @@ class _HomePageState extends State<HomePage> {
     'https://cdn.pixabay.com/photo/2017/12/27/07/07/brownie-3042106_1280.jpg',
     'https://cdn.pixabay.com/photo/2018/02/25/07/15/food-3179853_1280.jpg',
     'https://cdn.pixabay.com/photo/2015/10/26/11/10/honey-1006972_1280.jpg',
+  ];
+
+  final List<String> dropperFacilities = [
+    'Simply brows the tasks around you ',
+    'Accept or make an offer',
+    'Get it done',
+    'Get paid',
+    'Easy to join & you are the boss'
   ];
 
   @override
@@ -937,6 +946,59 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+
+            //SizedBox(height: 10,),
+
+            Container(
+              height: 600,
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      Expanded(
+                          flex: 2,
+                          child: Container(
+                              padding: EdgeInsets.fromLTRB(10, 10, 0, 10),
+                              child: const Text("Announcement",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                ),
+                              )
+                          )
+                      ),
+                      Expanded(
+                          flex: 1,
+                          child: Container(
+                          )
+                      ),
+
+                    ],
+                  ),
+                  Image.asset('assets/imageIcon/parcelHandOver.png'),
+                  SizedBox(height: 10,),
+                  Text("Become a Dropper", style:TextStyle(fontSize: 20),),
+                  BulletedList(
+                    listItems: dropperFacilities,
+                    listOrder: ListOrder.ordered,
+                    style: TextStyle(fontSize: 16),
+                  ),
+
+                  SizedBox(height: 10,),
+
+                  ButtonTheme(
+                      minWidth: 300.0,
+                      height: 50,
+                      child: RaisedButton(
+                        color: HexColor("#5BDB98"),
+                      onPressed: () {},
+                      child: Text("Join Here", style: TextStyle(color: Colors.white),),
+                      ),
+                  ),
+
+                ],
+              ),
+            ),
+
 
           ],
         ),
