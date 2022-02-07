@@ -856,7 +856,7 @@ class _HomePageState extends State<HomePage> {
                             //border: Border(color: Colors.greenAccent),
                             border: Border.all(
                                 color: Colors.greenAccent,
-                                width: 3.0),
+                                width: 2.0),
                             borderRadius: const BorderRadius.all(
                                 Radius.circular(10.0)
                             ),
@@ -998,6 +998,80 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
+
+            Container(
+              height: 390,
+                child: GridView.count(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 05,
+                  crossAxisSpacing: 05,
+                  children: <Widget>[
+                    Card(
+                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8)
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset('assets/imageIcon/secureCashlessPayments.png',height: 140,),
+                          Text('Secure Cashless Payments',style: TextStyle( fontSize: 18),),
+                        ],
+                      ),
+                    ),
+
+                    Card(
+                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8)
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset('assets/imageIcon/communications.png',height: 140,),
+                          Text('Built in Communications',style: TextStyle( fontSize: 18),),
+                        ],
+                      ),
+                    ),
+
+                    Card(
+                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8)
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset('assets/imageIcon/ratings.png',height: 140,),
+                          Text('Community Ratings & Reviews',style: TextStyle( fontSize: 18),),
+                        ],
+                      ),
+                    ),
+
+                    Card(
+                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8)
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset('assets/imageIcon/fairPayments.png',height: 140,),
+                          Text('Fair Payments',style: TextStyle( fontSize: 18),),
+                        ],
+                      ),
+                    ),
+                  ],
+                )
+
+            ),
+
+            SizedBox(height: 10,),
+            Container(
+              height: 40,
+              child: Text("Our Blog", style: TextStyle(fontSize: 18),),
+            ),
+
 
 
           ],
