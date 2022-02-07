@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -10,6 +11,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  final List<String> imagesList = [
+    'https://cdn.pixabay.com/photo/2017/12/10/14/47/piza-3010062_1280.jpg',
+    'https://cdn.pixabay.com/photo/2016/06/07/01/49/ice-cream-1440830_1280.jpg',
+    'https://cdn.pixabay.com/photo/2017/12/27/07/07/brownie-3042106_1280.jpg',
+    'https://cdn.pixabay.com/photo/2018/02/25/07/15/food-3179853_1280.jpg',
+    'https://cdn.pixabay.com/photo/2015/10/26/11/10/honey-1006972_1280.jpg',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -724,8 +733,7 @@ class _HomePageState extends State<HomePage> {
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
+
                         children: <Widget>[
                           // choose category
                           Expanded(
@@ -777,20 +785,158 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
 
-                    //////////////////// How it works read more ended ///
-
-                    SizedBox(height: 10,),
-
-
-
-
-
                   ],
                 ),
 
               ),
             ),
 
+            //////////////////// How it works read more ended ///
+
+            SizedBox(height: 10,),
+
+            Container(
+              //height: 600,
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      Expanded(
+                        flex: 2,
+                          child: Container(
+                            padding: EdgeInsets.fromLTRB(10, 10, 0, 10),
+                              child: Text("Recent Drops Around You",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                ),
+                              )
+                          )
+                      ),
+                      Expanded(
+                          flex: 1,
+                          child: Container(
+                              )
+                      ),
+
+                    ],
+                  ),
+
+                  CarouselSlider(
+                    options: CarouselOptions(
+                      //height: 400,
+                      aspectRatio: 16/9,
+                      viewportFraction: 0.8,
+                      initialPage: 0,
+                      enableInfiniteScroll: true,
+                      reverse: false,
+                      autoPlay: true,
+                      autoPlayInterval: Duration(seconds: 3),
+                      autoPlayAnimationDuration: Duration(milliseconds: 800),
+                      autoPlayCurve: Curves.fastOutSlowIn,
+                      enlargeCenterPage: true,
+                      scrollDirection: Axis.horizontal,
+                    ),
+                    items: imagesList
+                        .map(
+                          (item) => Center(
+                        child: Container(
+                          height: 150,
+
+                          decoration: BoxDecoration(
+                            //color: Colors.blue,
+                            //border: Border(color: Colors.greenAccent),
+                            border: Border.all(
+                                color: Colors.greenAccent,
+                                width: 3.0),
+                            borderRadius: const BorderRadius.all(
+                                Radius.circular(10.0)
+                            ),
+
+                          ),
+                          //height: 150,
+                          child: Row(
+                            children: <Widget>[
+                              Expanded(
+                                flex: 2,
+                                child: Container(
+                                  //padding: EdgeInsets.all(10),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    border: Border.all(color: Colors.white , width:10)
+                                  ),
+                                  height: 140,
+                                  child: Image.network(
+                                    item,
+                                    fit: BoxFit.cover,
+                                  ),
+
+                                ),
+                              ),
+
+                              Expanded(
+                                flex: 4,
+                                child: Container(
+                                  child: Column(
+                                    children: <Widget>[
+                                      const SizedBox(height: 10,),
+                                      const Text("Buy some groceries for me",
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 10,),
+                                      Row(
+                                        children: <Widget>[
+                                          Expanded(
+                                            flex: 5,
+                                            child: Container(
+                                              padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
+                                              child: const Text("X3"),
+                                            ),
+                                          ),
+                                          Expanded(
+                                              flex: 2,
+                                              child: Container()
+                                          ),
+                                          Expanded(
+                                            flex: 3,
+                                            child: Container(
+                                                child: Text("TK 30",
+                                                  style: TextStyle(
+                                                    color: HexColor("#5BDB98"),
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 18,
+                                                  ),
+                                                ),
+                                            ),
+                                          ),
+
+                                        ],
+                                      ),
+
+                                      const SizedBox(height: 10,),
+
+                                      Row(
+                                        children: <Widget>[
+                                          Image.asset('assets/imageIcon/star.png',height: 20,width: 20,),
+                                          Text("5.00"),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    )
+                        .toList(),
+                  ),
+                ],
+              ),
+            ),
 
           ],
         ),
