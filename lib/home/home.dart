@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:bulleted_list/bulleted_list.dart';
+import 'package:readmore/readmore.dart';
+import 'package:share_plus/share_plus.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -385,7 +387,7 @@ class _HomePageState extends State<HomePage> {
 
                                 ),
                                 child: Material(
-                                  elevation: 5,
+                                  elevation: 2,
                                   child: Container(
                                     decoration: BoxDecoration(
                                       color: Colors.white,
@@ -519,7 +521,7 @@ class _HomePageState extends State<HomePage> {
 
                                 ),
                                 child: Material(
-                                  elevation: 5,
+                                  elevation: 2,
                                   child: Container(
                                     decoration: BoxDecoration(
                                       color: Colors.white,
@@ -653,7 +655,7 @@ class _HomePageState extends State<HomePage> {
 
                                 ),
                                 child: Material(
-                                  elevation: 5,
+                                  elevation: 2,
                                   child: Container(
                                     decoration: BoxDecoration(
                                       color: Colors.white,
@@ -814,7 +816,7 @@ class _HomePageState extends State<HomePage> {
                         flex: 2,
                           child: Container(
                             padding: EdgeInsets.fromLTRB(10, 10, 0, 10),
-                              child: Text("Recent Drops Around You",
+                              child: const Text("Recent Drops Around You",
                                 style: TextStyle(
                                   fontSize: 20,
                                 ),
@@ -949,6 +951,7 @@ class _HomePageState extends State<HomePage> {
 
             //SizedBox(height: 10,),
 
+
             Container(
               height: 600,
               child: Column(
@@ -1000,11 +1003,12 @@ class _HomePageState extends State<HomePage> {
             ),
 
             Container(
-              height: 390,
+              height: 420,
                 child: GridView.count(
                   crossAxisCount: 2,
                   mainAxisSpacing: 05,
                   crossAxisSpacing: 05,
+                  physics: const NeverScrollableScrollPhysics(),
                   children: <Widget>[
                     Card(
                       elevation: 5,
@@ -1015,7 +1019,7 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset('assets/imageIcon/secureCashlessPayments.png',height: 140,),
-                          Text('Secure Cashless Payments',style: TextStyle( fontSize: 18),),
+                          const Text('Secure Cashless Payments',style: TextStyle( fontSize: 18),),
                         ],
                       ),
                     ),
@@ -1029,7 +1033,7 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset('assets/imageIcon/communications.png',height: 140,),
-                          Text('Built in Communications',style: TextStyle( fontSize: 18),),
+                          const FittedBox(child: Text('Built in Communications',style: TextStyle( fontSize: 18),)),
                         ],
                       ),
                     ),
@@ -1043,7 +1047,7 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset('assets/imageIcon/ratings.png',height: 140,),
-                          Text('Community Ratings & Reviews',style: TextStyle( fontSize: 18),),
+                          const FittedBox(child: Text('Community Ratings & Reviews',style: TextStyle( fontSize: 18),)),
                         ],
                       ),
                     ),
@@ -1057,7 +1061,7 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Image.asset('assets/imageIcon/fairPayments.png',height: 140,),
-                          Text('Fair Payments',style: TextStyle( fontSize: 18),),
+                          FittedBox(child: Text('Fair Payments',style: const TextStyle( fontSize: 18),)),
                         ],
                       ),
                     ),
@@ -1068,8 +1072,88 @@ class _HomePageState extends State<HomePage> {
 
             SizedBox(height: 10,),
             Container(
-              height: 40,
-              child: Text("Our Blog", style: TextStyle(fontSize: 18),),
+              //height: 800,
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      Expanded(
+                          flex: 2,
+                          child: Container(
+                              padding: EdgeInsets.fromLTRB(10, 10, 0, 10),
+                              child: const Text("Our Blog",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                ),
+                              )
+                          )
+                      ),
+                      Expanded(
+                          flex: 1,
+                          child: Container(
+                          )
+                      ),
+                    ],
+                  ),
+
+                  // SizedBox(height: 10,),
+
+                  ListView(
+                    scrollDirection: Axis.vertical,
+                    shrinkWrap: true,
+                    children: imagesList.map((item){
+                      return Card(
+                        color: Colors.white,
+                        child: Column(
+                          children: [
+                            ListTile(
+                              leading:Image.network(
+                                item,
+                                fit: BoxFit.cover,
+                              ),
+
+                              title: const Text('This week in chees magazine',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  )),
+                              subtitle: const ReadMoreText(
+                                'Flutter has its own UI components, along with an engine to render them on both the Android and iOS platforms. Most of those UI components, right out of the box, conform to the guidelines of Material Design.',
+                                trimLines: 3,
+                                colorClickableText: Colors.greenAccent,
+                                trimMode: TrimMode.Line,
+                                trimCollapsedText: 'Read More',
+                                trimExpandedText: ' Collapse ',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 14,
+                                  )
+                              ),
+                              trailing: IconButton(
+                                icon: Icon(Icons.share,color: Colors.greenAccent,),
+                                onPressed: () async {
+                                  Share.share('check out my website https://example.com', subject: 'Look what I made!');
+
+                              },
+                              ),
+
+                            ),
+                          ],
+                        ),
+                      );
+                    }).toList(),
+                  ),
+
+                  Container(
+                    height: 100,
+                    color: Colors.white,
+                  )
+
+
+
+                ],
+              ),
             ),
 
 

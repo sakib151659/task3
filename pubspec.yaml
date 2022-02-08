@@ -38,6 +38,9 @@ dependencies:
   animated_splash_screen: ^1.1.0
   carousel_slider: ^4.0.0
   bulleted_list: ^0.0.1+0.1a
+  readmore: ^2.1.0
+  share_plus: ^3.0.4
+  fancy_bottom_navigation: ^0.3.3
 
 
 dev_dependencies:
