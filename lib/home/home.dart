@@ -145,7 +145,7 @@ class _HomePageState extends State<HomePage> {
                                     children: [
                                       Card(
                                         color: HexColor("#60E99C"),
-                                        elevation: 5,
+                                        elevation: 3,
                                         shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.circular(8)
                                         ),
@@ -171,7 +171,7 @@ class _HomePageState extends State<HomePage> {
                                     children: [
                                       Card(
                                         color: HexColor("#60E99C"),
-                                        elevation: 5,
+                                        elevation: 3,
                                         shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.circular(8)
                                         ),
@@ -197,7 +197,7 @@ class _HomePageState extends State<HomePage> {
                                     children: [
                                       Card(
                                         color: HexColor("#60E99C"),
-                                        elevation: 5,
+                                        elevation: 3,
                                         shape: RoundedRectangleBorder(
                                             borderRadius: BorderRadius.circular(8)
                                         ),
@@ -289,7 +289,7 @@ class _HomePageState extends State<HomePage> {
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[
                   Material(
-                    elevation: 5,
+                    elevation: 3,
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(2)
@@ -423,7 +423,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(width: 10,),
 
                   Material(
-                    elevation: 5,
+                    elevation: 3,
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(2)
@@ -557,7 +557,7 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(width: 10,),
 
                   Material(
-                    elevation: 5,
+                    elevation: 3,
                     child: Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(2)
@@ -700,7 +700,7 @@ class _HomePageState extends State<HomePage> {
             SizedBox(height: 10,),
 
             Material(
-              elevation: 5,
+              elevation: 3,
               child: Container(
                 height: 200,
                 margin: EdgeInsets.zero,
@@ -1011,7 +1011,7 @@ class _HomePageState extends State<HomePage> {
                   physics: const NeverScrollableScrollPhysics(),
                   children: <Widget>[
                     Card(
-                      elevation: 5,
+                      elevation: 3,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8)
                       ),
@@ -1025,7 +1025,7 @@ class _HomePageState extends State<HomePage> {
                     ),
 
                     Card(
-                      elevation: 5,
+                      elevation: 3,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8)
                       ),
@@ -1039,7 +1039,7 @@ class _HomePageState extends State<HomePage> {
                     ),
 
                     Card(
-                      elevation: 5,
+                      elevation: 3,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8)
                       ),
@@ -1053,7 +1053,7 @@ class _HomePageState extends State<HomePage> {
                     ),
 
                     Card(
-                      elevation: 5,
+                      elevation: 3,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8)
                       ),

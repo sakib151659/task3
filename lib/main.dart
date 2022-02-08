@@ -5,6 +5,7 @@ import 'package:hexcolor/hexcolor.dart';
 //import 'authenticate/login.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'home/home.dart';
+import 'navigation/navigation.dart';
 void main() {
   runApp(MyApp());
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: "Test",
       home: AnimatedSplashScreen(
         splash: Image.asset('assets/images/appLogo.png'),
-        nextScreen: HomePage(),
+        nextScreen: NavBar(),
         backgroundColor: HexColor("#1B3149"),
         duration: 10,
         splashIconSize: 120,
